@@ -5,7 +5,7 @@ const ObjectId = mongoose.Schema.Types.ObjectId;
 const linkSchema = new mongoose.Schema({
   title: String,
   image: String,
-  user: { type: ObjectId, ref: 'User' },
+  user: String,
   comments: [{ type: ObjectId, ref: 'Comment' }]
 }, { timestamps: true });
 

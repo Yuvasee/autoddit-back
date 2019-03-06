@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 
 const userSchema = new mongoose.Schema({
-  name: String
+  name: String,
 }, { timestamps: true });
 
 const User = mongoose.model('User', userSchema);

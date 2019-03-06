@@ -23,6 +23,7 @@ mongoose.connection.once('open', () => console.log('DB connection ok'))
 mongoose.connect(process.env.MONGO_URI);
 
 app.post('/api/v1/links', upload.single('image'), linkController.postLink);
+app.get('/api/v1/links', linkController.listLinks);
 
 app.get('/api/v1/test', (req, res) => {
   res.status(200).send({
