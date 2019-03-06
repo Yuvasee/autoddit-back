@@ -4,8 +4,8 @@ const ObjectId = mongoose.Schema.Types.ObjectId;
 
 const commentSchema = new mongoose.Schema({
   title: String,
-  image: String,
   user: { type: ObjectId, ref: 'User' },
+  link: { type: ObjectId, ref: 'Link' },
   parent: this,
   comments: [this],
   votes: [{ type: ObjectId, ref: 'Vote' }]
